@@ -32,7 +32,7 @@ function verificarToken(req,res,next) {
     const bearerHeader = req.headers['authorization'];
 
     if(typeof bearerHeader !== 'undefined'){ //si es diferente de undefined significa diferente de vacio
-       const bearetoken = bearerHeader.split(' ')[1] //el toque esta en la posicion 1
+       const bearetoken = bearerHeader.split(' ')[1] //el token esta en la posicion 1
        req.token = bearetoken;
        next();
     }else{
